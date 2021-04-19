@@ -8,7 +8,22 @@
                 <legend class="border-bottom mb-4">
                     Join today
                 </legend>
-                {{ form|crispy }}
+                <div class="row">
+                    <div class="col-6">
+                        {{ form.username|as_crispy_field }}
+                    </div>
+                    <div class="col-6">
+                        {{ form.email|as_crispy_field }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        {{ form.password1|as_crispy_field }}
+                    </div>
+                    <div class="col-6">
+                        {{ form.password2|as_crispy_field }}
+                    </div>
+                </div>
             </fieldset>
             <div class="form-group">
                 <button class="btn btn-outline-info" type="submit">Sign up</button>
